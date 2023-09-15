@@ -4,9 +4,17 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <RouterLink to="/" :class="'nav-link'" :active-class="'active'" :exact-path-active-class="''">Home</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/player-cards" :class="'nav-link'" :active-class="'active'" :exact-path-active-class="''">Player Cards</RouterLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
