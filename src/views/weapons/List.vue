@@ -2,14 +2,14 @@
   <main class="container">
     <section class="card mt-4">
       <header class="card-header">
-          <h1 class="card-title">Player Cards</h1>
+          <h1 class="card-title">Weapons</h1>
       </header>
 
       <article class="card-body">
-        <div v-if="cards" v-for="card in cards" :key="card.uuid">
-          <h2>{{  card.displayName }}</h2>
-          <a :href="'/player-cards/show/'+ card.uuid">
-            <img :src="card.displayIcon"/>
+        <div v-if="weapons" v-for="weapon in weapons" :key="weapon.uuid">
+          <h2>{{  weapon.displayName }}</h2>
+          <a :href="'/weapons/show/'+ weapon.uuid">
+            <img :src="weapon.displayIcon"/>
           </a>
         </div>
         <div v-else class="spinner-border" role="status">
@@ -27,16 +27,16 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      cards: null
+      weapons: null
     }
   },
   created() {
-    this.getCards()
+    this.getWeapons()
   },   
   methods: {
-    getCards() {
-        axios.get('https://valorant-api.com/v1/playercards').then(response => {
-          this.cards = response.data.data
+    getWeapons() {
+        axios.get('https://valorant-api.com/v1/weapons').then(response => {
+          this.weapons = response.data.data
         }).catch(errors => {
           console.log(errors)
         })
