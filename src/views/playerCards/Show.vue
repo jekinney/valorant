@@ -19,26 +19,16 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  data() {
-    return {
-      card: null
-    }
-  },
-  created() {
-    this.getCard()
-  },   
-  methods: {
-    getCard() {
-        axios.get('https://valorant-api.com/v1/playercards/'+ this.$route.params.cardId).then(response => {
-          this.card = response.data.data
-        }).catch(errors => {
-          console.log(errors)
-        })
-      }
-    }
+  name: 'ShowPlayerCard',
+  props: {
+    card: Object
   }
-
+}
 </script>
+<style scoped>
+.show {
+  color: white;
+  text-align: center;
+}
+</style>
