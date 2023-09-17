@@ -12,6 +12,12 @@ const router = createRouter({
       path: '/player-cards',
       name: 'player-cards-all',
       component: () => import('../views/playerCards/List.vue')
+    },
+    {
+      path: '/player-cards/show',
+      name: 'player-cards-show',
+      props: true,
+      component: () => import('../views/playerCards/Show.vue')
     }
   ]
 })

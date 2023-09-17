@@ -4,14 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg-gray">
       <div class="container-fluid">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink to="/" :class="'nav-link'" :active-class="'active'" :exact-path-active-class="''">Home</RouterLink>
+            <RouterLink to="/" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Home</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/player-cards" :class="'nav-link'" :active-class="'active'" :exact-path-active-class="''">Player Cards</RouterLink>
+            <RouterLink to="/player-cards" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Player Cards</RouterLink>
           </li>
         </ul>
       </div>
@@ -20,3 +20,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
 </template>
+<style>
+body {
+  background-color: black;
+}
+.custom-bg-gray {
+  background-color: #777;
+}
+.red-text {
+  color: red;
+}
+</style>
