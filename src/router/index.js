@@ -10,14 +10,23 @@ const router = createRouter({
     },
     {
       path: '/player-cards',
-      name: 'player-cards-all',
+      name: 'player-cards-list',
       component: () => import('../views/playerCards/List.vue')
     },
     {
-      path: '/player-cards/show',
+      path: '/player-cards/show/:cardId',
       name: 'player-cards-show',
-      props: true,
       component: () => import('../views/playerCards/Show.vue')
+    },
+    {
+      path: '/weapons',
+      name: 'weapons-list',
+      component: () => import('../views/weapons/List.vue')
+    },
+    {
+      path: '/weapons/show/:weaponId',
+      name: 'weapons-show',
+      component: () => import('../views/weapons/Show.vue')
     }
   ]
 })
