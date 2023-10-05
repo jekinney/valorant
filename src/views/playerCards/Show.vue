@@ -26,9 +26,5 @@ export default {
   }
 }
 </script>
-<style scoped>
-.show {
-  color: white;
-  text-align: center;
-}
+<style>
 </style>

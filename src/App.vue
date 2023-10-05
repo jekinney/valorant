@@ -14,7 +14,10 @@ import { RouterLink, RouterView } from 'vue-router'
             <RouterLink to="/player-cards" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Player Cards</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/weapons" :class="'nav-link'" :active-class="'active'" :exact-path-active-class="''">Weapons</RouterLink>
+            <RouterLink to="/weapons" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Weapons</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/skins" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Skins</RouterLink>
           </li>
         </ul>
       </div>

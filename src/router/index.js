@@ -27,6 +27,16 @@ const router = createRouter({
       path: '/weapons/show/:weaponId',
       name: 'weapons-show',
       component: () => import('../views/weapons/Show.vue')
+    },
+    {
+      path: '/skins',
+      name:'skins-list',
+      component: () => import('../views/skins/List.vue')
+    },
+    {
+      path: '/skins/show/:skinId',
+      name:'skins-show',
+      component: () => import('../views/skins/Show.vue')
     }
   ]
 })
