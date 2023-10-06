@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,8 +37,18 @@ const router = createRouter({
       path: '/skins/show/:skinId',
       name:'skins-show',
       component: () => import('../views/skins/Show.vue')
+    },
+    {
+      path: '/buddies',
+      name: 'buddies-list',
+      component: () => import('../views/buddies/List.vue')
+    },
+    {
+      path: '/buddies/show/:buddyId',
+      name: 'buddies-show',
+      component: () => import('../views/buddies/Show.vue')
     }
   ]
-})
+});
 
-export default router
+export default router;

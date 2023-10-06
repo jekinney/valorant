@@ -19,6 +19,9 @@ import { RouterLink, RouterView } from 'vue-router'
           <li>
             <RouterLink to="/skins" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Skins</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/buddies" :class="'nav-link red-text'" :active-class="'active'" :exact-path-active-class="''">Buddies</RouterLink>
+          </li>
         </ul>
       </div>
     </nav>
